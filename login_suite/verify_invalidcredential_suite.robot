@@ -9,6 +9,9 @@ Test Setup    Launch Browser
 Test Teardown    Run keywords     Capture Page Screenshot    AND   Close Browser
 Test Template    Verify Invalid Credential Template
 
+Force Tags    alwaysrun
+Default Tags    invalid
+
 *** Test Cases ***
 TC1    John    John123    Invalid credentials
 TC2    Peter    Peter123    Invalid credentials    

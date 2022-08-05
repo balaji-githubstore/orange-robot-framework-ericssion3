@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220805 15:25:32.028" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220805 19:09:17.286" rpa="false" schemaversion="3">
 <suite id="s1" name="Suites">
 <suite id="s1-s1" name="Verify Addemployee Suite" source="D:\Mine\Company\Ericsson3\orange_hrm_framework\employee_suite\verify_addemployee_suite.robot">
 <test id="s1-s1-t1" name="Verify Add Employee Test" line="14">
@@ -7,51 +7,47 @@
 <kw name="Get Driver Path" library="DriverSetup">
 <var>${exec_path}</var>
 <arg>browser_name=${BROWSER_NAME}</arg>
-<msg timestamp="20220805 15:25:32.887" level="INFO">
+<msg timestamp="20220805 19:09:17.838" level="INFO">
 </msg>
-<msg timestamp="20220805 15:25:32.887" level="INFO">====== WebDriver manager ======</msg>
-<msg timestamp="20220805 15:25:35.116" level="INFO">Current google-chrome version is 104.0.5112</msg>
-<msg timestamp="20220805 15:25:35.117" level="INFO">Get LATEST chromedriver version for 104.0.5112 google-chrome</msg>
-<msg timestamp="20220805 15:25:35.453" level="INFO">There is no [win32] chromedriver for browser 104.0.5112 in cache</msg>
-<msg timestamp="20220805 15:25:35.453" level="INFO">Trying to download new driver from https://chromedriver.storage.googleapis.com/104.0.5112.79/chromedriver_win32.zip</msg>
-<msg timestamp="20220805 15:25:36.457" level="INFO">Driver has been saved in cache [C:\Users\Balaji\.wdm\drivers\chromedriver\win32\104.0.5112.79]</msg>
-<msg timestamp="20220805 15:25:36.458" level="INFO">====== WebDriver manager ======
+<msg timestamp="20220805 19:09:17.839" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20220805 19:09:19.032" level="INFO">Current google-chrome version is 104.0.5112</msg>
+<msg timestamp="20220805 19:09:19.033" level="INFO">Get LATEST chromedriver version for 104.0.5112 google-chrome</msg>
+<msg timestamp="20220805 19:09:19.598" level="INFO">Driver [C:\Users\Balaji\.wdm\drivers\chromedriver\win32\104.0.5112.79\chromedriver.exe] found in cache</msg>
+<msg timestamp="20220805 19:09:19.599" level="INFO">====== WebDriver manager ======
 Current google-chrome version is 104.0.5112
 Get LATEST chromedriver version for 104.0.5112 google-chrome
-There is no [win32] chromedriver for browser 104.0.5112 in cache
-Trying to download new driver from https://chromedriver.storage.googleapis.com/104.0.5112.79/chromedriver_win32.zip
-Driver has been saved in cache [C:\Users\Balaji\.wdm\drivers\chromedriver\win32\104.0.5112.79]</msg>
-<msg timestamp="20220805 15:25:36.458" level="INFO">${exec_path} = C:\Users\Balaji\.wdm\drivers\chromedriver\win32\104.0.5112.79\chromedriver.exe</msg>
-<status status="PASS" starttime="20220805 15:25:32.886" endtime="20220805 15:25:36.458"/>
+Driver [C:\Users\Balaji\.wdm\drivers\chromedriver\win32\104.0.5112.79\chromedriver.exe] found in cache</msg>
+<msg timestamp="20220805 19:09:19.599" level="INFO">${exec_path} = C:\Users\Balaji\.wdm\drivers\chromedriver\win32\104.0.5112.79\chromedriver.exe</msg>
+<status status="PASS" starttime="20220805 19:09:17.838" endtime="20220805 19:09:19.600"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER_NAME}</arg>
 <arg>executable_path=${exec_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220805 15:25:36.459" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220805 15:25:36.458" endtime="20220805 15:25:40.334"/>
+<msg timestamp="20220805 19:09:19.602" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220805 19:09:19.600" endtime="20220805 19:09:24.006"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220805 15:25:40.336" endtime="20220805 15:25:40.576"/>
+<status status="PASS" starttime="20220805 19:09:24.007" endtime="20220805 19:09:24.361"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220805 15:25:40.577" endtime="20220805 15:25:40.581"/>
+<status status="PASS" starttime="20220805 19:09:24.362" endtime="20220805 19:09:24.364"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>path=${EXECDIR}${/}screenshot</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20220805 15:25:40.581" endtime="20220805 15:25:40.585"/>
+<status status="PASS" starttime="20220805 19:09:24.364" endtime="20220805 19:09:24.365"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220805 15:25:40.587" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
-<status status="PASS" starttime="20220805 15:25:40.586" endtime="20220805 15:25:45.927"/>
+<msg timestamp="20220805 19:09:24.367" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220805 19:09:24.366" endtime="20220805 19:09:28.971"/>
 </kw>
-<status status="PASS" starttime="20220805 15:25:32.885" endtime="20220805 15:25:45.928"/>
+<status status="PASS" starttime="20220805 19:09:17.837" endtime="20220805 19:09:28.972"/>
 </kw>
 <kw name="Login Into The OrangeHRM" library="LoginPage">
 <arg>Admin</arg>
@@ -69,10 +65,10 @@ Examples
 <arg>${USERNAME_LOCATOR}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220805 15:25:45.932" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
-<status status="PASS" starttime="20220805 15:25:45.931" endtime="20220805 15:25:46.057"/>
+<msg timestamp="20220805 19:09:28.976" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20220805 19:09:28.975" endtime="20220805 19:09:29.164"/>
 </kw>
-<status status="PASS" starttime="20220805 15:25:45.929" endtime="20220805 15:25:46.058"/>
+<status status="PASS" starttime="20220805 19:09:28.973" endtime="20220805 19:09:29.165"/>
 </kw>
 <kw name="Enter Password" library="LoginPage">
 <arg>${password}</arg>
@@ -84,12 +80,12 @@ Examples
 <arg>${PASSWORD_LOCATOR}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220805 15:25:46.062" level="INFO">Typing password into text field 'css=#txtPassword'.</msg>
-<msg timestamp="20220805 15:25:46.125" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220805 15:25:46.221" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220805 15:25:46.060" endtime="20220805 15:25:46.221"/>
+<msg timestamp="20220805 19:09:29.167" level="INFO">Typing password into text field 'css=#txtPassword'.</msg>
+<msg timestamp="20220805 19:09:29.263" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220805 19:09:29.425" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220805 19:09:29.166" endtime="20220805 19:09:29.425"/>
 </kw>
-<status status="PASS" starttime="20220805 15:25:46.059" endtime="20220805 15:25:46.222"/>
+<status status="PASS" starttime="20220805 19:09:29.165" endtime="20220805 19:09:29.425"/>
 </kw>
 <kw name="Click Login" library="LoginPage">
 <doc>Click on login
@@ -98,65 +94,165 @@ Examples
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${LOGIN_LOCATOR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220805 15:25:46.224" level="INFO">Clicking element 'xpath=//input[@name='Submit']'.</msg>
-<status status="PASS" starttime="20220805 15:25:46.223" endtime="20220805 15:25:49.609"/>
+<msg timestamp="20220805 19:09:29.428" level="INFO">Clicking element 'xpath=//input[@name='Submit']'.</msg>
+<status status="PASS" starttime="20220805 19:09:29.427" endtime="20220805 19:09:32.630"/>
 </kw>
-<status status="PASS" starttime="20220805 15:25:46.222" endtime="20220805 15:25:49.611"/>
+<status status="PASS" starttime="20220805 19:09:29.426" endtime="20220805 19:09:32.631"/>
 </kw>
-<status status="PASS" starttime="20220805 15:25:45.928" endtime="20220805 15:25:49.614"/>
+<status status="PASS" starttime="20220805 19:09:28.972" endtime="20220805 19:09:32.632"/>
 </kw>
 <kw name="Click PIM" library="MainPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${PIM_LOCATOR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220805 15:25:49.621" level="INFO">Clicking element 'link=PIM'.</msg>
-<status status="PASS" starttime="20220805 15:25:49.619" endtime="20220805 15:25:52.978"/>
+<msg timestamp="20220805 19:09:32.638" level="INFO">Clicking element 'link=PIM'.</msg>
+<msg timestamp="20220805 19:09:32.663" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=104.0.5112.80)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003078B3+2193587]
+	Ordinal0 [0x002A0681+1771137]
+	Ordinal0 [0x001B41A8+803240]
+	Ordinal0 [0x0019C910+706832]
+	Ordinal0 [0x00200139+1114425]
+	Ordinal0 [0x0020D282+1168002]
+	Ordinal0 [0x001FD5C6+1103302]
+	Ordinal0 [0x001D77E0+948192]
+	Ordinal0 [0x001D86E6+952038]
+	GetHandleVerifier [0x005B0CB2+2738370]
+	GetHandleVerifier [0x005A21B8+2678216]
+	GetHandleVerifier [0x003917AA+512954]
+	GetHandleVerifier [0x00390856+509030]
+	Ordinal0 [0x002A743B+1799227]
+	Ordinal0 [0x002ABB68+1817448]
+	Ordinal0 [0x002ABC55+1817685]
+	Ordinal0 [0x002B5230+1856048]
+	BaseThreadInitThunk [0x749B6359+25]
+	RtlGetAppContainerNamedObjectPath [0x77208944+228]
+	RtlGetAppContainerNamedObjectPath [0x77208914+180]
+	(No symbol) [0x00000000]
+</msg>
+<msg timestamp="20220805 19:09:32.688" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=104.0.5112.80)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003078B3+2193587]
+	Ordinal0 [0x002A0681+1771137]
+	Ordinal0 [0x001B41A8+803240]
+	Ordinal0 [0x0019C910+706832]
+	Ordinal0 [0x00200139+1114425]
+	Ordinal0 [0x0020D282+1168002]
+	Ordinal0 [0x001FD5C6+1103302]
+	Ordinal0 [0x001D77E0+948192]
+	Ordinal0 [0x001D86E6+952038]
+	GetHandleVerifier [0x005B0CB2+2738370]
+	GetHandleVerifier [0x005A21B8+2678216]
+	GetHandleVerifier [0x003917AA+512954]
+	GetHandleVerifier [0x00390856+509030]
+	Ordinal0 [0x002A743B+1799227]
+	Ordinal0 [0x002ABB68+1817448]
+	Ordinal0 [0x002ABC55+1817685]
+	Ordinal0 [0x002B5230+1856048]
+	BaseThreadInitThunk [0x749B6359+25]
+	RtlGetAppContainerNamedObjectPath [0x77208944+228]
+	RtlGetAppContainerNamedObjectPath [0x77208914+180]
+	(No symbol) [0x00000000]
+</msg>
+<status status="FAIL" starttime="20220805 19:09:32.637" endtime="20220805 19:09:32.927"/>
 </kw>
-<status status="PASS" starttime="20220805 15:25:49.615" endtime="20220805 15:25:52.979"/>
+<status status="FAIL" starttime="20220805 19:09:32.634" endtime="20220805 19:09:32.928"/>
 </kw>
 <kw name="Click Add Employee Menu" library="MainPage">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${ADDEMPLOYEE_LOCATOR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220805 15:25:52.982" level="INFO">Clicking element 'link=Add Employee'.</msg>
-<status status="PASS" starttime="20220805 15:25:52.981" endtime="20220805 15:25:54.891"/>
-</kw>
-<status status="PASS" starttime="20220805 15:25:52.980" endtime="20220805 15:25:54.893"/>
+<status status="NOT RUN" starttime="20220805 19:09:32.928" endtime="20220805 19:09:32.929"/>
 </kw>
 <kw name="Enter FirstName" library="AddEmployeePage">
 <arg>Jack</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${FIRSTNAME_LOCATOR}</arg>
-<arg>${firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220805 15:25:54.897" level="INFO">Typing text 'Jack' into text field 'id=firstName'.</msg>
-<status status="PASS" starttime="20220805 15:25:54.895" endtime="20220805 15:25:55.018"/>
-</kw>
-<status status="PASS" starttime="20220805 15:25:54.893" endtime="20220805 15:25:55.018"/>
+<status status="NOT RUN" starttime="20220805 19:09:32.929" endtime="20220805 19:09:32.929"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220805 15:25:55.019" endtime="20220805 15:25:57.282"/>
+<msg timestamp="20220805 19:09:34.231" level="ERROR">When closing browser, received exception: Execution terminated by signal</msg>
+<msg timestamp="20220805 19:09:34.231" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="FAIL" starttime="20220805 19:09:32.929" endtime="20220805 19:09:34.232">Execution terminated by signal</status>
 </kw>
-<status status="PASS" starttime="20220805 15:25:32.884" endtime="20220805 15:25:57.283"/>
+<status status="FAIL" starttime="20220805 19:09:17.835" endtime="20220805 19:09:34.232">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=104.0.5112.80)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003078B3+2193587]
+	Ordinal0 [0x002A0681+1771137]
+	Ordinal0 [0x001B41A8+803240]
+	Ordinal0 [0x0019C910+706832]
+	Ordinal0 [0x00200139+1114425]
+	Ordinal0 [0x0020D282+1168002]
+	Ordinal0 [0x001FD5C6+1103302]
+	Ordinal0 [0x001D77E0+948192]
+	Ordinal0 [0x001D86E6+952038]
+	GetHandleVerifier [0x005B0CB2+2738370]
+	GetHandleVerifier [0x005A21B8+2678216]
+	GetHandleVerifier [0x003917AA+512954]
+	GetHandleVerifier [0x00390856+509030]
+	Ordinal0 [0x002A743B+1799227]
+	Ordinal0 [0x002ABB68+1817448]
+	Ordinal0 [0x002ABC55+1817685]
+	Ordinal0 [0x002B5230+1856048]
+	BaseThreadInitThunk [0x749B6359+25]
+	RtlGetAppContainerNamedObjectPath [0x77208944+228]
+	RtlGetAppContainerNamedObjectPath [0x77208914+180]
+	(No symbol) [0x00000000]
+
+
+Also teardown failed:
+Execution terminated by signal</status>
 </test>
 <doc>This suite handles test cases related to add employee
 connected with scenario SC_OH_09 and TC_OH_017</doc>
-<status status="PASS" starttime="20220805 15:25:32.094" endtime="20220805 15:25:57.284"/>
+<status status="FAIL" starttime="20220805 19:09:17.329" endtime="20220805 19:09:34.234"/>
 </suite>
-<status status="PASS" starttime="20220805 15:25:32.066" endtime="20220805 15:25:57.287"/>
+<status status="FAIL" starttime="20220805 19:09:17.301" endtime="20220805 19:09:34.235"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Verify Addemployee Suite">Suites.Verify Addemployee Suite</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Verify Addemployee Suite">Suites.Verify Addemployee Suite</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220805 19:09:32.663" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=104.0.5112.80)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003078B3+2193587]
+	Ordinal0 [0x002A0681+1771137]
+	Ordinal0 [0x001B41A8+803240]
+	Ordinal0 [0x0019C910+706832]
+	Ordinal0 [0x00200139+1114425]
+	Ordinal0 [0x0020D282+1168002]
+	Ordinal0 [0x001FD5C6+1103302]
+	Ordinal0 [0x001D77E0+948192]
+	Ordinal0 [0x001D86E6+952038]
+	GetHandleVerifier [0x005B0CB2+2738370]
+	GetHandleVerifier [0x005A21B8+2678216]
+	GetHandleVerifier [0x003917AA+512954]
+	GetHandleVerifier [0x00390856+509030]
+	Ordinal0 [0x002A743B+1799227]
+	Ordinal0 [0x002ABB68+1817448]
+	Ordinal0 [0x002ABC55+1817685]
+	Ordinal0 [0x002B5230+1856048]
+	BaseThreadInitThunk [0x749B6359+25]
+	RtlGetAppContainerNamedObjectPath [0x77208944+228]
+	RtlGetAppContainerNamedObjectPath [0x77208914+180]
+	(No symbol) [0x00000000]
+</msg>
+<msg timestamp="20220805 19:09:34.231" level="ERROR">When closing browser, received exception: Execution terminated by signal</msg>
 </errors>
 </robot>
