@@ -1,14 +1,38 @@
-[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+
+
+====== WebDriver manager ======
+Current google-chrome version is 104.0.5112
+Get LATEST chromedriver version for 104.0.5112 google-chrome
+There is no [win32] chromedriver for browser 104.0.5112 in cache
+Trying to download new driver from https://chromedriver.storage.googleapis.com/104.0.5112.79/chromedriver_win32.zip
+Driver has been saved in cache [C:\Users\Balaji\.wdm\drivers\chromedriver\win32\104.0.5112.79]
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.80)
 Stacktrace:
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
-NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:437:5
-assert.that/<@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
-assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
-GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2180:10
-despatch@chrome://remote/content/marionette/server.js:306:40
-execute@chrome://remote/content/marionette/server.js:279:16
-onPacket/<@chrome://remote/content/marionette/server.js:252:20
-onPacket@chrome://remote/content/marionette/server.js:253:9
-_onJSONObjectReady/<@chrome://remote/content/marionette/transport.js:500:20
+Backtrace:
+	Ordinal0 [0x007078B3+2193587]
+	Ordinal0 [0x006A0681+1771137]
+	Ordinal0 [0x005B4070+802928]
+	Ordinal0 [0x005A9AB2+760498]
+	Ordinal0 [0x0059CEAF+708271]
+	Ordinal0 [0x005A1142+725314]
+	Ordinal0 [0x005A55C9+742857]
+	Ordinal0 [0x005B5500+808192]
+	Ordinal0 [0x0060D2C2+1168066]
+	Ordinal0 [0x005FD5C6+1103302]
+	Ordinal0 [0x005D77E0+948192]
+	Ordinal0 [0x005D86E6+952038]
+	GetHandleVerifier [0x009B0CB2+2738370]
+	GetHandleVerifier [0x009A21B8+2678216]
+	GetHandleVerifier [0x007917AA+512954]
+	GetHandleVerifier [0x00790856+509030]
+	Ordinal0 [0x006A743B+1799227]
+	Ordinal0 [0x006ABB68+1817448]
+	Ordinal0 [0x006ABC55+1817685]
+	Ordinal0 [0x006B5230+1856048]
+	BaseThreadInitThunk [0x749B6359+25]
+	RtlGetAppContainerNamedObjectPath [0x77208944+228]
+	RtlGetAppContainerNamedObjectPath [0x77208914+180]
 
 Second signal will force exit.
+[ ERROR ] When closing browser, received exception: Execution terminated by signal

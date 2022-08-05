@@ -9,54 +9,94 @@ TC1
     File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:13
     T:  TC1    
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:13
-      Verify Invalid Credential Template    John    John123    Invalid credentials
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:22
-      Enter username    ${username}
-      |  ${username} = John (str)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\Resource\Pages\LoginPage.resource:16
-      Input Text    ${USERNAME_LOCATOR}    ${username}
-      |  ${USERNAME_LOCATOR} = id=txtUsername (str)
-      |  ${username} = John (str)
-______________________________________________________________________________
-| FAIL |
-WebDriverException: Message: TypeError: browsingContext.currentWindowGlobal is null
-Stacktrace:
-getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
-------------------------------------------------------------------------------
-TC2                                                                     
-  Traceback (most recent call last):
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:14
-    T:  TC2    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:8
       Launch Browser    
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     File  D:\Mine\Company\Ericsson3\orange_hrm_framework\Resource\Base\CommonFunctionalities.resource:14
-      '${BROWSER_NAME}' == 'ff'    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\Resource\Base\CommonFunctionalities.resource:15
-      Open Browser    browser=${BROWSER_NAME}    executable_path=${EXECDIR}${/}driver${/}geckodriver.exe
-      |  browser=${BROWSER_NAME} = browser=ff (str)
-      |  executable_path=${EXECDIR}${/}driver${/}geckodriver.exe = executable_path=D:\Mine\Company\Ericsson3\orange_hrm_framework\driver\geckodriver.exe (str)
+      Open Browser    browser=${BROWSER_NAME}    executable_path=${exec_path}
+      |  browser=${BROWSER_NAME} = browser=chrome (str)
+      |  executable_path=${exec_path} = executable_path=C:\Users\Balaji\.wdm\drivers\chromedriver\win32\104.0.5112.79\chromedriver.exe (str)
 ______________________________________________________________________________
 | FAIL |
 Setup failed:
-Execution terminated by signal
+WebDriverException: Message: 'chromedriver.exe' executable may have wrong permissions. Please see https://chromedriver.chromium.org/home
 ------------------------------------------------------------------------------
-TC3                                                                   | FAIL |
-Test execution stopped due to a fatal error.
+TC2                                                                   | PASS |
+------------------------------------------------------------------------------
+TC3                                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:15
+    T:  TC3    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:8
+      Launch Browser    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\Resource\Base\CommonFunctionalities.resource:18
+      Go To    url=${URL}
+      |  url=${URL} = url=https://opensource-demo.orangehrmlive.com/ (str)
+______________________________________________________________________________
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:15
+    T:  TC3    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:9
+      Close Browser    
+______________________________________________________________________________
+| FAIL |
+Setup failed:
+WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=104.0.5112.80)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x007078B3+2193587]
+	Ordinal0 [0x006A0681+1771137]
+	Ordinal0 [0x005B41A8+803240]
+	Ordinal0 [0x005A7E1E+753182]
+	Ordinal0 [0x005A7A0F+752143]
+	Ordinal0 [0x005A6FAF+749487]
+	Ordinal0 [0x005A5E94+745108]
+	Ordinal0 [0x005A6498+746648]
+	Ordinal0 [0x005B0610+787984]
+	Ordinal0 [0x005A781D+751645]
+	Ordinal0 [0x005A8450+754768]
+	Ordinal0 [0x005A7A2A+752170]
+	Ordinal0 [0x005A6FAF+749487]
+	Ordinal0 [0x005A5E94+745108]
+	Ordinal0 [0x005A636D+746349]
+	Ordinal0 [0x005B5974+809332]
+	Ordinal0 [0x0060E18D+1171853]
+	Ordinal0 [0x005FD7AC+1103788]
+	Ordinal0 [0x0060DAE2+1170146]
+	Ordinal0 [0x005FD5C6+1103302]
+	Ordinal0 [0x005D77E0+948192]
+	Ordinal0 [0x005D86E6+952038]
+	GetHandleVerifier [0x009B0CB2+2738370]
+	GetHandleVerifier [0x009A21B8+2678216]
+	GetHandleVerifier [0x007917AA+512954]
+	GetHandleVerifier [0x00790856+509030]
+	Ordinal0 [0x006A743B+1799227]
+	Ordinal0 [0x006ABB68+1817448]
+	Ordinal0 [0x006ABC55+1817685]
+	Ordinal0 [0x006B5230+1856048]
+	BaseThreadInitThunk [0x749B6359+25]
+	RtlGetAppContainerNamedObjectPath [0x77208944+228]
+	RtlGetAppContainerNamedObjectPath [0x77208914+180]
+
+
+Also teardown failed:
+Execution terminated by signal
 ------------------------------------------------------------------------------
 TC4                                                                   | FAIL |
 Test execution stopped due to a fatal error.
 ------------------------------------------------------------------------------
 Suites.Verify Invalidcredential Suite :: This suite handles test c... | FAIL |
-4 tests, 0 passed, 4 failed
+4 tests, 1 passed, 3 failed
 ==============================================================================
 Suites                                                                | FAIL |
-4 tests, 0 passed, 4 failed
+4 tests, 1 passed, 3 failed
 ==============================================================================
 Output:  D:\Mine\Company\Ericsson3\orange_hrm_framework\pabot_results\1\output.xml

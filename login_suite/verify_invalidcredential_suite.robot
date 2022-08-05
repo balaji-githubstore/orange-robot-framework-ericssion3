@@ -6,7 +6,7 @@ Resource    ../Resource/Base/CommonFunctionalities.resource
 Resource    ../Resource/Pages/LoginPage.resource
 
 Test Setup    Launch Browser
-Test Teardown    Close Browser
+Test Teardown    Run keywords     Capture Page Screenshot    AND   Close Browser
 Test Template    Verify Invalid Credential Template
 
 *** Test Cases ***

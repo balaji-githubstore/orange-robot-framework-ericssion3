@@ -1,157 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220804 17:30:25.503" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220805 15:25:58.223" rpa="false" schemaversion="3">
 <suite id="s1" name="Suites">
 <suite id="s1-s1" name="Verify Invalidcredential Suite Copy" source="D:\Mine\Company\Ericsson3\orange_hrm_framework\sample_suite\verify_invalidcredential_suite copy.robot">
 <test id="s1-s1-t1" name="TC1" line="12">
 <kw name="Launch Browser" library="CommonFunctionalities" type="SETUP">
-<if>
-<branch type="IF" condition="'${BROWSER_NAME}' == 'edge'">
+<kw name="Get Driver Path" library="DriverSetup">
+<var>${exec_path}</var>
+<arg>browser_name=${BROWSER_NAME}</arg>
+<msg timestamp="20220805 15:25:58.659" level="INFO">
+</msg>
+<msg timestamp="20220805 15:25:58.659" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20220805 15:25:59.566" level="INFO">====== WebDriver manager ======</msg>
+<status status="FAIL" starttime="20220805 15:25:58.658" endtime="20220805 15:25:59.566"/>
+</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER_NAME}</arg>
-<arg>executable_path=${EXECDIR}${/}driver${/}msedgedriver.exe</arg>
+<arg>executable_path=${exec_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="NOT RUN" starttime="20220804 17:30:26.171" endtime="20220804 17:30:26.171"/>
+<status status="NOT RUN" starttime="20220805 15:25:59.567" endtime="20220805 15:25:59.567"/>
 </kw>
-<status status="NOT RUN" starttime="20220804 17:30:26.170" endtime="20220804 17:30:26.172"/>
-</branch>
-<branch type="ELSE IF" condition="'${BROWSER_NAME}' == 'ff'">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=${BROWSER_NAME}</arg>
-<arg>executable_path=${EXECDIR}${/}driver${/}geckodriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220804 17:30:26.174" level="INFO">Opening browser 'ff' to base url 'None'.</msg>
-<msg timestamp="20220804 17:30:26.175" level="INFO">Firefox driver log is always forced to to: D:\Mine\Company\Ericsson3\orange_hrm_framework\pabot_results\2\geckodriver-1.log</msg>
-<status status="PASS" starttime="20220804 17:30:26.173" endtime="20220804 17:30:41.363"/>
-</kw>
-<status status="PASS" starttime="20220804 17:30:26.172" endtime="20220804 17:30:41.363"/>
-</branch>
-<branch type="ELSE">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=${BROWSER_NAME}</arg>
-<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="NOT RUN" starttime="20220804 17:30:41.364" endtime="20220804 17:30:41.364"/>
-</kw>
-<status status="NOT RUN" starttime="20220804 17:30:41.363" endtime="20220804 17:30:41.364"/>
-</branch>
-<status status="PASS" starttime="20220804 17:30:26.170" endtime="20220804 17:30:41.365"/>
-</if>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220804 17:30:41.365" endtime="20220804 17:30:41.629"/>
+<status status="NOT RUN" starttime="20220805 15:25:59.567" endtime="20220805 15:25:59.567"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220804 17:30:41.630" endtime="20220804 17:30:41.644"/>
+<status status="NOT RUN" starttime="20220805 15:25:59.568" endtime="20220805 15:25:59.568"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>path=${EXECDIR}${/}screenshot</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20220804 17:30:41.646" endtime="20220804 17:30:41.650"/>
+<status status="NOT RUN" starttime="20220805 15:25:59.568" endtime="20220805 15:25:59.568"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220804 17:30:41.654" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
-<status status="PASS" starttime="20220804 17:30:41.651" endtime="20220804 17:30:45.042"/>
+<status status="NOT RUN" starttime="20220805 15:25:59.569" endtime="20220805 15:25:59.569"/>
 </kw>
-<status status="PASS" starttime="20220804 17:30:26.169" endtime="20220804 17:30:45.044"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>bala</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220804 17:30:45.044" endtime="20220804 17:30:45.046"/>
+<status status="FAIL" starttime="20220805 15:25:58.657" endtime="20220805 15:25:59.569"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220804 17:30:45.047" endtime="20220804 17:30:58.223"/>
+<status status="PASS" starttime="20220805 15:25:59.570" endtime="20220805 15:25:59.571"/>
 </kw>
-<status status="PASS" starttime="20220804 17:30:26.167" endtime="20220804 17:30:58.223"/>
+<status status="FAIL" starttime="20220805 15:25:58.657" endtime="20220805 15:25:59.571">Setup failed:
+Execution terminated by signal</status>
 </test>
 <test id="s1-s1-t2" name="TC2" line="15">
-<kw name="Launch Browser" library="CommonFunctionalities" type="SETUP">
-<if>
-<branch type="IF" condition="'${BROWSER_NAME}' == 'edge'">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=${BROWSER_NAME}</arg>
-<arg>executable_path=${EXECDIR}${/}driver${/}msedgedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="NOT RUN" starttime="20220804 17:30:58.225" endtime="20220804 17:30:58.225"/>
-</kw>
-<status status="NOT RUN" starttime="20220804 17:30:58.225" endtime="20220804 17:30:58.226"/>
-</branch>
-<branch type="ELSE IF" condition="'${BROWSER_NAME}' == 'ff'">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=${BROWSER_NAME}</arg>
-<arg>executable_path=${EXECDIR}${/}driver${/}geckodriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220804 17:30:58.227" level="INFO">Opening browser 'ff' to base url 'None'.</msg>
-<msg timestamp="20220804 17:30:58.227" level="INFO">Firefox driver log is always forced to to: D:\Mine\Company\Ericsson3\orange_hrm_framework\pabot_results\2\geckodriver-2.log</msg>
-<msg timestamp="20220804 17:31:01.248" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<status status="FAIL" starttime="20220804 17:30:58.226" endtime="20220804 17:31:01.248"/>
-</kw>
-<status status="FAIL" starttime="20220804 17:30:58.226" endtime="20220804 17:31:01.249"/>
-</branch>
-<branch type="ELSE">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=${BROWSER_NAME}</arg>
-<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="NOT RUN" starttime="20220804 17:31:01.249" endtime="20220804 17:31:01.250"/>
-</kw>
-<status status="NOT RUN" starttime="20220804 17:31:01.249" endtime="20220804 17:31:01.250"/>
-</branch>
-<status status="FAIL" starttime="20220804 17:30:58.225" endtime="20220804 17:31:01.250"/>
-</if>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20220804 17:31:01.251" endtime="20220804 17:31:01.251"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>30s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" starttime="20220804 17:31:01.251" endtime="20220804 17:31:01.251"/>
-</kw>
-<kw name="Set Screenshot Directory" library="SeleniumLibrary">
-<arg>path=${EXECDIR}${/}screenshot</arg>
-<doc>Sets the directory for captured screenshots.</doc>
-<status status="NOT RUN" starttime="20220804 17:31:01.251" endtime="20220804 17:31:01.251"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" starttime="20220804 17:31:01.251" endtime="20220804 17:31:01.252"/>
-</kw>
-<status status="FAIL" starttime="20220804 17:30:58.224" endtime="20220804 17:31:01.252"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220804 17:31:01.252" endtime="20220804 17:31:01.253"/>
-</kw>
-<status status="FAIL" starttime="20220804 17:30:58.224" endtime="20220804 17:31:01.253">Setup failed:
-Execution terminated by signal</status>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20220805 15:25:59.573" endtime="20220805 15:25:59.573">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s1-t3" name="TC3" line="19">
 <tag>robot:exit</tag>
-<status status="FAIL" starttime="20220804 17:31:01.254" endtime="20220804 17:31:01.255">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" starttime="20220805 15:25:59.574" endtime="20220805 15:25:59.574">Test execution stopped due to a fatal error.</status>
 </test>
 <doc>This suite handles test cases related to valid credential
 connected with scenario SC_OH_2 and TC_OH_03</doc>
-<status status="FAIL" starttime="20220804 17:30:25.665" endtime="20220804 17:31:01.255"/>
+<status status="FAIL" starttime="20220805 15:25:58.260" endtime="20220805 15:25:59.575"/>
 </suite>
-<status status="FAIL" starttime="20220804 17:30:25.616" endtime="20220804 17:31:01.257"/>
+<status status="FAIL" starttime="20220805 15:25:58.236" endtime="20220805 15:25:59.576"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="2" skip="0">All Tests</stat>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="1" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+<stat pass="0" fail="1" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
 </tag>
 <suite>
-<stat pass="1" fail="2" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="1" fail="2" skip="0" id="s1-s1" name="Verify Invalidcredential Suite Copy">Suites.Verify Invalidcredential Suite Copy</stat>
+<stat pass="0" fail="3" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s1" name="Verify Invalidcredential Suite Copy">Suites.Verify Invalidcredential Suite Copy</stat>
 </suite>
 </statistics>
 <errors>

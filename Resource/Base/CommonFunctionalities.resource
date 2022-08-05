@@ -5,7 +5,7 @@ Library    SeleniumLibrary
 Library    DriverSetup.py
 
 *** Variables ***
-${BROWSER_NAME}    chrome
+${BROWSER_NAME}    ff
 ${URL}    https://opensource-demo.orangehrmlive.com/
 
 *** Keywords ***

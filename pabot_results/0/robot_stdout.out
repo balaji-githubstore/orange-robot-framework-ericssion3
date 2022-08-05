@@ -3,33 +3,12 @@ Suites
 ==============================================================================
 Suites.Verify Addemployee Suite :: This suite handles test cases related to...
 ==============================================================================
-Verify Add Employee Test                                                
-  Traceback (most recent call last):
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\employee_suite\verify_addemployee_suite.robot:14
-    T:  Verify Add Employee Test    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\employee_suite\verify_addemployee_suite.robot:15
-      Login Into The OrangeHRM    Admin    admin123
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\Resource\Pages\LoginPage.resource:34
-      Enter username    ${username}
-      |  ${username} = Admin (str)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\Resource\Pages\LoginPage.resource:16
-      Input Text    ${USERNAME_LOCATOR}    ${username}
-      |  ${USERNAME_LOCATOR} = id=txtUsername (str)
-      |  ${username} = Admin (str)
-______________________________________________________________________________
-| FAIL |
-WebDriverException: Message: TypeError: browsingContext.currentWindowGlobal is null
-Stacktrace:
-getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+Verify Add Employee Test                                              | PASS |
 ------------------------------------------------------------------------------
-Suites.Verify Addemployee Suite :: This suite handles test cases r... | FAIL |
-1 test, 0 passed, 1 failed
+Suites.Verify Addemployee Suite :: This suite handles test cases r... | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Suites                                                                | FAIL |
-1 test, 0 passed, 1 failed
+Suites                                                                | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  D:\Mine\Company\Ericsson3\orange_hrm_framework\pabot_results\0\output.xml
