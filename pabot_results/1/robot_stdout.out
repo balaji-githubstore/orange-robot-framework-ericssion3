@@ -1,0 +1,62 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Verify Invalidcredential Suite :: This suite handles test cases rela...
+==============================================================================
+TC1                                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:13
+    T:  TC1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:13
+      Verify Invalid Credential Template    John    John123    Invalid credentials
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:22
+      Enter username    ${username}
+      |  ${username} = John (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\Resource\Pages\LoginPage.resource:16
+      Input Text    ${USERNAME_LOCATOR}    ${username}
+      |  ${USERNAME_LOCATOR} = id=txtUsername (str)
+      |  ${username} = John (str)
+______________________________________________________________________________
+| FAIL |
+WebDriverException: Message: TypeError: browsingContext.currentWindowGlobal is null
+Stacktrace:
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+------------------------------------------------------------------------------
+TC2                                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:14
+    T:  TC2    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot:8
+      Launch Browser    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\Resource\Base\CommonFunctionalities.resource:14
+      '${BROWSER_NAME}' == 'ff'    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Mine\Company\Ericsson3\orange_hrm_framework\Resource\Base\CommonFunctionalities.resource:15
+      Open Browser    browser=${BROWSER_NAME}    executable_path=${EXECDIR}${/}driver${/}geckodriver.exe
+      |  browser=${BROWSER_NAME} = browser=ff (str)
+      |  executable_path=${EXECDIR}${/}driver${/}geckodriver.exe = executable_path=D:\Mine\Company\Ericsson3\orange_hrm_framework\driver\geckodriver.exe (str)
+______________________________________________________________________________
+| FAIL |
+Setup failed:
+Execution terminated by signal
+------------------------------------------------------------------------------
+TC3                                                                   | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+TC4                                                                   | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+Suites.Verify Invalidcredential Suite :: This suite handles test c... | FAIL |
+4 tests, 0 passed, 4 failed
+==============================================================================
+Suites                                                                | FAIL |
+4 tests, 0 passed, 4 failed
+==============================================================================
+Output:  D:\Mine\Company\Ericsson3\orange_hrm_framework\pabot_results\1\output.xml

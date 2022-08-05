@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220804 17:30:25.504" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Verify Invalidcredential Suite" source="D:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot">
+<test id="s1-s1-t1" name="TC1" line="13">
+<kw name="Launch Browser" library="CommonFunctionalities" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER_NAME}' == 'edge'">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}msedgedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:26.251" endtime="20220804 17:30:26.251"/>
+</kw>
+<status status="NOT RUN" starttime="20220804 17:30:26.250" endtime="20220804 17:30:26.252"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER_NAME}' == 'ff'">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}geckodriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220804 17:30:26.255" level="INFO">Opening browser 'ff' to base url 'None'.</msg>
+<msg timestamp="20220804 17:30:26.256" level="INFO">Firefox driver log is always forced to to: D:\Mine\Company\Ericsson3\orange_hrm_framework\pabot_results\1\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220804 17:30:26.253" endtime="20220804 17:30:46.295"/>
+</kw>
+<status status="PASS" starttime="20220804 17:30:26.252" endtime="20220804 17:30:46.296"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:46.297" endtime="20220804 17:30:46.297"/>
+</kw>
+<status status="NOT RUN" starttime="20220804 17:30:46.296" endtime="20220804 17:30:46.297"/>
+</branch>
+<status status="PASS" starttime="20220804 17:30:26.250" endtime="20220804 17:30:46.298"/>
+</if>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220804 17:30:46.298" endtime="20220804 17:30:46.826"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220804 17:30:46.826" endtime="20220804 17:30:46.832"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${EXECDIR}${/}screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220804 17:30:46.832" endtime="20220804 17:30:46.834"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220804 17:30:46.835" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220804 17:30:46.834" endtime="20220804 17:30:48.673"/>
+</kw>
+<status status="PASS" starttime="20220804 17:30:26.249" endtime="20220804 17:30:48.673"/>
+</kw>
+<kw name="Verify Invalid Credential Template">
+<arg>John</arg>
+<arg>John123</arg>
+<arg>Invalid credentials</arg>
+<kw name="Log" library="BuiltIn">
+<arg>Code in ${BROWSER_NAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220804 17:30:48.676" level="INFO">Code in ff</msg>
+<status status="PASS" starttime="20220804 17:30:48.675" endtime="20220804 17:30:48.676"/>
+</kw>
+<kw name="Enter username" library="LoginPage">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220804 17:30:48.678" level="INFO">Typing text 'John' into text field 'id=txtUsername'.</msg>
+<msg timestamp="20220804 17:30:58.541" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:437:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2180:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+<msg timestamp="20220804 17:30:58.567" level="FAIL">WebDriverException: Message: TypeError: browsingContext.currentWindowGlobal is null
+Stacktrace:
+getMarionetteCommandsActorProxy/get/&lt;@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+</msg>
+<status status="FAIL" starttime="20220804 17:30:48.677" endtime="20220804 17:30:58.572"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:48.676" endtime="20220804 17:30:58.574"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${password}</arg>
+<status status="NOT RUN" starttime="20220804 17:30:58.575" endtime="20220804 17:30:58.575"/>
+</kw>
+<kw name="Click Login" library="LoginPage">
+<status status="NOT RUN" starttime="20220804 17:30:58.576" endtime="20220804 17:30:58.576"/>
+</kw>
+<kw name="Validate Error Message" library="LoginPage">
+<arg>${expected_error}</arg>
+<status status="NOT RUN" starttime="20220804 17:30:58.576" endtime="20220804 17:30:58.577"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:48.674" endtime="20220804 17:30:58.578"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220804 17:30:58.579" endtime="20220804 17:30:59.166"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:26.246" endtime="20220804 17:30:59.166">WebDriverException: Message: TypeError: browsingContext.currentWindowGlobal is null
+Stacktrace:
+getMarionetteCommandsActorProxy/get/&lt;@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+</status>
+</test>
+<test id="s1-s1-t2" name="TC2" line="14">
+<kw name="Launch Browser" library="CommonFunctionalities" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER_NAME}' == 'edge'">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}msedgedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:59.177" endtime="20220804 17:30:59.178"/>
+</kw>
+<status status="NOT RUN" starttime="20220804 17:30:59.176" endtime="20220804 17:30:59.178"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER_NAME}' == 'ff'">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}geckodriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220804 17:30:59.182" level="INFO">Opening browser 'ff' to base url 'None'.</msg>
+<msg timestamp="20220804 17:30:59.183" level="INFO">Firefox driver log is always forced to to: D:\Mine\Company\Ericsson3\orange_hrm_framework\pabot_results\1\geckodriver-2.log</msg>
+<msg timestamp="20220804 17:31:00.190" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="FAIL" starttime="20220804 17:30:59.179" endtime="20220804 17:31:00.190"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:59.179" endtime="20220804 17:31:00.191"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:31:00.192" endtime="20220804 17:31:00.192"/>
+</kw>
+<status status="NOT RUN" starttime="20220804 17:31:00.191" endtime="20220804 17:31:00.192"/>
+</branch>
+<status status="FAIL" starttime="20220804 17:30:59.176" endtime="20220804 17:31:00.192"/>
+</if>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220804 17:31:00.192" endtime="20220804 17:31:00.193"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220804 17:31:00.193" endtime="20220804 17:31:00.194"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${EXECDIR}${/}screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="NOT RUN" starttime="20220804 17:31:00.194" endtime="20220804 17:31:00.194"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:31:00.194" endtime="20220804 17:31:00.195"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:59.175" endtime="20220804 17:31:00.195"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220804 17:31:00.196" endtime="20220804 17:31:00.196"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:59.173" endtime="20220804 17:31:00.197">Setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-t3" name="TC3" line="15">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20220804 17:31:00.198" endtime="20220804 17:31:00.199">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t4" name="TC4" line="16">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20220804 17:31:00.200" endtime="20220804 17:31:00.200">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This suite handles test cases related to valid credential
+connected with scenario SC_OH_2 and TC_OH_03</doc>
+<status status="FAIL" starttime="20220804 17:30:25.694" endtime="20220804 17:31:00.201"/>
+</suite>
+<status status="FAIL" starttime="20220804 17:30:25.642" endtime="20220804 17:31:00.204"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+</tag>
+<suite>
+<stat pass="0" fail="4" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s1" name="Verify Invalidcredential Suite">Suites.Verify Invalidcredential Suite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220804 17:30:58.541" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:437:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2180:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+</errors>
+</robot>

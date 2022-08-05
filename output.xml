@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220804 18:20:54.228" rpa="false" schemaversion="3">
+<suite id="s1" name="Verify Invalidcredential Suite" source="d:\Mine\Company\Ericsson3\orange_hrm_framework\login_suite\verify_invalidcredential_suite.robot">
+<test id="s1-t1" name="TC2" line="14">
+<kw name="Launch Browser" library="CommonFunctionalities" type="SETUP">
+<kw name="Get Driver Path" library="DriverSetup">
+<var>${exec_path}</var>
+<arg>browser_name=${BROWSER_NAME}</arg>
+<msg timestamp="20220804 18:20:59.755" level="INFO">
+</msg>
+<msg timestamp="20220804 18:20:59.760" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20220804 18:21:00.511" level="INFO">Current google-chrome version is 103.0.5060</msg>
+<msg timestamp="20220804 18:21:00.511" level="INFO">Get LATEST chromedriver version for 103.0.5060 google-chrome</msg>
+<msg timestamp="20220804 18:21:00.656" level="INFO">Driver [C:\Users\Balaji\.wdm\drivers\chromedriver\win32\103.0.5060.134\chromedriver.exe] found in cache</msg>
+<msg timestamp="20220804 18:21:00.657" level="INFO">====== WebDriver manager ======
+Current google-chrome version is 103.0.5060
+Get LATEST chromedriver version for 103.0.5060 google-chrome
+Driver [C:\Users\Balaji\.wdm\drivers\chromedriver\win32\103.0.5060.134\chromedriver.exe] found in cache</msg>
+<msg timestamp="20220804 18:21:00.660" level="INFO">${exec_path} = C:\Users\Balaji\.wdm\drivers\chromedriver\win32\103.0.5060.134\chromedriver.exe</msg>
+<status status="PASS" starttime="20220804 18:20:57.641" endtime="20220804 18:21:00.660"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${exec_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220804 18:21:17.218" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220804 18:21:00.661" endtime="20220804 18:21:19.758"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220804 18:21:19.760" endtime="20220804 18:21:19.905"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220804 18:21:19.906" endtime="20220804 18:21:19.914"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${EXECDIR}${/}screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220804 18:21:19.916" endtime="20220804 18:21:19.922"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220804 18:21:19.927" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220804 18:21:19.923" endtime="20220804 18:21:25.746"/>
+</kw>
+<status status="PASS" starttime="20220804 18:20:55.319" endtime="20220804 18:21:25.748"/>
+</kw>
+<kw name="Verify Invalid Credential Template">
+<arg>Peter</arg>
+<arg>Peter123</arg>
+<arg>Invalid credentials</arg>
+<kw name="Log" library="BuiltIn">
+<arg>Code in ${BROWSER_NAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220804 18:21:25.759" level="INFO">Code in chrome</msg>
+<status status="PASS" starttime="20220804 18:21:25.756" endtime="20220804 18:21:25.760"/>
+</kw>
+<kw name="Enter username" library="LoginPage">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220804 18:21:25.770" level="INFO">Typing text 'Peter' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20220804 18:21:25.764" endtime="20220804 18:21:25.906"/>
+</kw>
+<status status="PASS" starttime="20220804 18:21:25.761" endtime="20220804 18:21:25.907"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${password}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220804 18:21:25.915" level="INFO">Typing password into text field 'css=#txtPassword'.</msg>
+<msg timestamp="20220804 18:21:25.999" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220804 18:21:26.067" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220804 18:21:25.913" endtime="20220804 18:21:26.068"/>
+</kw>
+<status status="PASS" starttime="20220804 18:21:25.908" endtime="20220804 18:21:26.069"/>
+</kw>
+<kw name="Click Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN_LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220804 18:21:26.077" level="INFO">Clicking element 'xpath=//input[@name='Submit']'.</msg>
+<status status="PASS" starttime="20220804 18:21:26.074" endtime="20220804 18:21:27.642"/>
+</kw>
+<status status="PASS" starttime="20220804 18:21:26.071" endtime="20220804 18:21:27.646"/>
+</kw>
+<kw name="Validate Error Message" library="LoginPage">
+<arg>${expected_error}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${ERROR_LOCATOR}</arg>
+<arg>${expected_error}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220804 18:21:27.659" level="INFO">Verifying element 'id=spanMessage' contains exact text 'Invalid credentials'.</msg>
+<status status="PASS" starttime="20220804 18:21:27.655" endtime="20220804 18:21:27.698"/>
+</kw>
+<status status="PASS" starttime="20220804 18:21:27.648" endtime="20220804 18:21:27.699"/>
+</kw>
+<status status="PASS" starttime="20220804 18:21:25.750" endtime="20220804 18:21:27.700"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220804 18:21:27.702" endtime="20220804 18:21:30.333"/>
+</kw>
+<status status="PASS" starttime="20220804 18:20:55.316" endtime="20220804 18:21:30.335"/>
+</test>
+<doc>This suite handles test cases related to valid credential
+connected with scenario SC_OH_2 and TC_OH_03</doc>
+<status status="PASS" starttime="20220804 18:20:54.236" endtime="20220804 18:21:30.340"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Verify Invalidcredential Suite">Verify Invalidcredential Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220804 17:30:25.540" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Verify Addemployee Suite" source="D:\Mine\Company\Ericsson3\orange_hrm_framework\employee_suite\verify_addemployee_suite.robot">
+<test id="s1-s1-t1" name="Verify Add Employee Test" line="14">
+<kw name="Launch Browser" library="CommonFunctionalities" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER_NAME}' == 'edge'">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}msedgedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:26.188" endtime="20220804 17:30:26.189"/>
+</kw>
+<status status="NOT RUN" starttime="20220804 17:30:26.188" endtime="20220804 17:30:26.189"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER_NAME}' == 'ff'">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}geckodriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220804 17:30:26.196" level="INFO">Opening browser 'ff' to base url 'None'.</msg>
+<msg timestamp="20220804 17:30:26.198" level="INFO">Firefox driver log is always forced to to: D:\Mine\Company\Ericsson3\orange_hrm_framework\pabot_results\0\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220804 17:30:26.190" endtime="20220804 17:30:45.399"/>
+</kw>
+<status status="PASS" starttime="20220804 17:30:26.189" endtime="20220804 17:30:45.399"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:45.400" endtime="20220804 17:30:45.400"/>
+</kw>
+<status status="NOT RUN" starttime="20220804 17:30:45.399" endtime="20220804 17:30:45.400"/>
+</branch>
+<status status="PASS" starttime="20220804 17:30:26.187" endtime="20220804 17:30:45.400"/>
+</if>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220804 17:30:45.401" endtime="20220804 17:30:45.824"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220804 17:30:45.824" endtime="20220804 17:30:45.830"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${EXECDIR}${/}screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220804 17:30:45.831" endtime="20220804 17:30:45.832"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220804 17:30:45.833" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220804 17:30:45.832" endtime="20220804 17:30:47.623"/>
+</kw>
+<status status="PASS" starttime="20220804 17:30:26.187" endtime="20220804 17:30:47.624"/>
+</kw>
+<kw name="Login Into The OrangeHRM" library="LoginPage">
+<arg>Admin</arg>
+<arg>admin123</arg>
+<kw name="Enter username" library="LoginPage">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220804 17:30:47.630" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<msg timestamp="20220804 17:30:55.915" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:437:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2180:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+<msg timestamp="20220804 17:30:55.918" level="FAIL">WebDriverException: Message: TypeError: browsingContext.currentWindowGlobal is null
+Stacktrace:
+getMarionetteCommandsActorProxy/get/&lt;@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+</msg>
+<status status="FAIL" starttime="20220804 17:30:47.627" endtime="20220804 17:30:56.116"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:47.625" endtime="20220804 17:30:56.120"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${password}</arg>
+<status status="NOT RUN" starttime="20220804 17:30:56.122" endtime="20220804 17:30:56.123"/>
+</kw>
+<kw name="Click Login" library="LoginPage">
+<status status="NOT RUN" starttime="20220804 17:30:56.123" endtime="20220804 17:30:56.124"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:47.624" endtime="20220804 17:30:56.125"/>
+</kw>
+<kw name="Click PIM" library="MainPage">
+<status status="NOT RUN" starttime="20220804 17:30:56.126" endtime="20220804 17:30:56.127"/>
+</kw>
+<kw name="Click Add Employee Menu" library="MainPage">
+<status status="NOT RUN" starttime="20220804 17:30:56.127" endtime="20220804 17:30:56.128"/>
+</kw>
+<kw name="Enter FirstName" library="AddEmployeePage">
+<arg>Jack</arg>
+<status status="NOT RUN" starttime="20220804 17:30:56.128" endtime="20220804 17:30:56.129"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220804 17:30:56.130" endtime="20220804 17:30:57.988"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:26.184" endtime="20220804 17:30:57.988">WebDriverException: Message: TypeError: browsingContext.currentWindowGlobal is null
+Stacktrace:
+getMarionetteCommandsActorProxy/get/&lt;@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+</status>
+</test>
+<doc>This suite handles test cases related to add employee
+connected with scenario SC_OH_09 and TC_OH_017</doc>
+<status status="FAIL" starttime="20220804 17:30:25.670" endtime="20220804 17:30:57.992"/>
+</suite>
+<status status="FAIL" starttime="20220804 17:30:25.622" endtime="20220804 17:30:57.996"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Verify Addemployee Suite">Suites.Verify Addemployee Suite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220804 17:30:55.915" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:437:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2180:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+</errors>
+</robot>

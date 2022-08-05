@@ -1,0 +1,14 @@
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:437:5
+assert.that/<@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2180:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/<@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/<@chrome://remote/content/marionette/transport.js:500:20
+
+Second signal will force exit.

@@ -1,0 +1,15 @@
+1659614426302	geckodriver	INFO	Listening on 127.0.0.1:58960
+1659614429320	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58961" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Balaji\\AppData\\Local\\Temp\\rust_mozprofileARaH76"
+1659614430261	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Balaji\\AppData\\Local\\Temp\\rust_mozprofileARaH76\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58961/devtools/browser/621d3b0b-f5f5-4a26-a1d9-68201e82c2d4
+1659614445995	Marionette	INFO	Listening on port 59089
+Read port: 59089
+1659614446234	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1659614458423	Marionette	INFO	Stopped listening on port 59089
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+Exiting due to channel error.

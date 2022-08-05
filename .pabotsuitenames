@@ -1,0 +1,9 @@
+datasources:5a40b914caf540934d3c7b1e0456da3482bfeb0a
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:ab0648a3b6d09615e8aad867d1d3a48de43055f0
+--suite Suites.Verify Addemployee Suite
+--suite Suites.Verify Invalidcredential Suite
+--suite Suites.Verify Invalidcredential Suite Copy
+--suite Suites.Verify Validcredential Csv Suite
+--suite Suites.Verify Validcredential Suite

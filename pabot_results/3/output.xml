@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220804 17:30:25.503" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Verify Validcredential Csv Suite" source="D:\Mine\Company\Ericsson3\orange_hrm_framework\sample_suite\verify_validcredential_csv_suite.robot">
+<test id="s1-s1-t1" name="Verify Valid Credential_TC1" line="13">
+<kw name="Launch Browser" library="CommonFunctionalities" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER_NAME}' == 'edge'">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}msedgedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:26.253" endtime="20220804 17:30:26.253"/>
+</kw>
+<status status="NOT RUN" starttime="20220804 17:30:26.252" endtime="20220804 17:30:26.253"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER_NAME}' == 'ff'">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}geckodriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220804 17:30:26.255" level="INFO">Opening browser 'ff' to base url 'None'.</msg>
+<msg timestamp="20220804 17:30:26.257" level="INFO">Firefox driver log is always forced to to: D:\Mine\Company\Ericsson3\orange_hrm_framework\pabot_results\3\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220804 17:30:26.254" endtime="20220804 17:30:42.483"/>
+</kw>
+<status status="PASS" starttime="20220804 17:30:26.254" endtime="20220804 17:30:42.483"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:42.484" endtime="20220804 17:30:42.484"/>
+</kw>
+<status status="NOT RUN" starttime="20220804 17:30:42.484" endtime="20220804 17:30:42.485"/>
+</branch>
+<status status="PASS" starttime="20220804 17:30:26.252" endtime="20220804 17:30:42.485"/>
+</if>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220804 17:30:42.485" endtime="20220804 17:30:42.815"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220804 17:30:42.817" endtime="20220804 17:30:42.827"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${EXECDIR}${/}screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220804 17:30:42.828" endtime="20220804 17:30:42.830"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220804 17:30:42.831" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220804 17:30:42.831" endtime="20220804 17:30:44.686"/>
+</kw>
+<status status="PASS" starttime="20220804 17:30:26.251" endtime="20220804 17:30:44.686"/>
+</kw>
+<kw name="Verify Valid Credential Template">
+<arg>Admin</arg>
+<arg>admin123</arg>
+<arg>My Info</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=txtUsername</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220804 17:30:44.690" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<msg timestamp="20220804 17:30:54.193" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:437:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2180:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+<msg timestamp="20220804 17:30:54.195" level="FAIL">WebDriverException: Message: TypeError: browsingContext.currentWindowGlobal is null
+Stacktrace:
+getMarionetteCommandsActorProxy/get/&lt;@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+</msg>
+<status status="FAIL" starttime="20220804 17:30:44.688" endtime="20220804 17:30:54.200"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=txtPassword</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:54.201" endtime="20220804 17:30:54.202"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name=Submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:54.202" endtime="20220804 17:30:54.202"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${expected_value}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:54.203" endtime="20220804 17:30:54.203"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:44.687" endtime="20220804 17:30:54.205"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220804 17:30:54.206" endtime="20220804 17:30:57.870"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:26.246" endtime="20220804 17:30:57.871">WebDriverException: Message: TypeError: browsingContext.currentWindowGlobal is null
+Stacktrace:
+getMarionetteCommandsActorProxy/get/&lt;@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+</status>
+</test>
+<test id="s1-s1-t2" name="Verify Valid Credential_TC2" line="13">
+<kw name="Launch Browser" library="CommonFunctionalities" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER_NAME}' == 'edge'">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}msedgedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:30:57.883" endtime="20220804 17:30:57.883"/>
+</kw>
+<status status="NOT RUN" starttime="20220804 17:30:57.882" endtime="20220804 17:30:57.883"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER_NAME}' == 'ff'">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}geckodriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220804 17:30:57.884" level="INFO">Opening browser 'ff' to base url 'None'.</msg>
+<msg timestamp="20220804 17:30:57.967" level="INFO">Firefox driver log is always forced to to: D:\Mine\Company\Ericsson3\orange_hrm_framework\pabot_results\3\geckodriver-2.log</msg>
+<msg timestamp="20220804 17:31:01.073" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="FAIL" starttime="20220804 17:30:57.884" endtime="20220804 17:31:01.073"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:57.883" endtime="20220804 17:31:01.074"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:31:01.075" endtime="20220804 17:31:01.075"/>
+</kw>
+<status status="NOT RUN" starttime="20220804 17:31:01.074" endtime="20220804 17:31:01.075"/>
+</branch>
+<status status="FAIL" starttime="20220804 17:30:57.882" endtime="20220804 17:31:01.076"/>
+</if>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220804 17:31:01.076" endtime="20220804 17:31:01.076"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220804 17:31:01.076" endtime="20220804 17:31:01.076"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${EXECDIR}${/}screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="NOT RUN" starttime="20220804 17:31:01.077" endtime="20220804 17:31:01.077"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20220804 17:31:01.077" endtime="20220804 17:31:01.077"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:57.882" endtime="20220804 17:31:01.078"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220804 17:31:01.078" endtime="20220804 17:31:01.079"/>
+</kw>
+<status status="FAIL" starttime="20220804 17:30:57.878" endtime="20220804 17:31:01.079">Setup failed:
+Execution terminated by signal</status>
+</test>
+<doc>Connecting CSV file</doc>
+<status status="FAIL" starttime="20220804 17:30:25.671" endtime="20220804 17:31:01.081"/>
+</suite>
+<status status="FAIL" starttime="20220804 17:30:25.617" endtime="20220804 17:31:01.083"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="Verify Validcredential Csv Suite">Suites.Verify Validcredential Csv Suite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220804 17:30:54.193" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:437:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2180:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+</errors>
+</robot>
